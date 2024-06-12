@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1>Data Analytics Dashboard</h1>
+    </div>
+    <div id="chart-container">
+        <canvas id="dataChart"></canvas>
+    </div>
+    <div id="filter-container">
+        <label for="data-filter">Filter Data:</label>
+        <select id="data-filter">
+            <option value="all">All</option>
+            <option value="last-week">Last Week</option>
+            <option value="last-month">Last Month</option>
+        </select>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
