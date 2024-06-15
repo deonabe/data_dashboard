@@ -61,3 +61,14 @@ document.getElementById('data-filter')
             });
     });
 });
+
+setInterval(function() {
+    fetch('/api/data')
+        .then(response => response.json())
+        .then(newData => { 
+            // Update chart with new data
+            myChart.data.labels = newData.map(item => item.timestamp); 
+            myChart.data.datasets[0].data = newData.map(item => item.value);
+            myChart.update();
+        }); 
+}, 60000); // Fetch new data every 60 seconds
